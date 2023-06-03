@@ -1,9 +1,11 @@
-type LandingProps = {
-  string?: string;
-};
+import Header from "../components/Header";
 
-const Landing = ({ string, ...props }: LandingProps) => {
-  return <>{string}</>;
+const Landing = () => {
+  return (
+    <>
+      <Header header="Built CRM" />
+    </>
+  );
 };
 
 export default Landing;
