@@ -1,9 +1,13 @@
-type loginProps = {
-  string?: string;
-};
+import Header from "../components/Header";
+import LoginForm from "../components/LoginForm";
 
-const LoginPage = ({ string, ...props }: loginProps) => {
-  return <div>LoginPage</div>;
+const LoginPage = () => {
+  return (
+    <div>
+      <Header />
+      <LoginForm />
+    </div>
+  );
 };
 
 export default LoginPage;

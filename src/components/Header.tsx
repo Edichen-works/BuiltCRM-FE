@@ -1,13 +1,11 @@
 import useViewportWidth from "../hooks/useViewPortWidth";
-type HeaderProps = {
-  header?: string;
-};
 
-const Header = ({ header }: HeaderProps) => {
+const Header = () => {
   const isDesktopView = useViewportWidth("esm");
+  const HEADER = "Built CRM";
   return (
-    <div className=" h-1/5 w-full">
-      {isDesktopView ? header : header + "mobile"}
+    <div className=" h-1/5 w-full text-center">
+      {isDesktopView ? HEADER : HEADER + " mobile"}
     </div>
   );
 };

@@ -8,7 +8,7 @@ const ErrorPage = () => {
     >
       <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
-      <Button title="Return to main page" variant="home" />
+      <Button title="Return to main page" variant="Home" />
     </div>
   );
 };
