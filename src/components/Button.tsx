@@ -2,23 +2,26 @@ import { useNavigate } from "react-router-dom";
 
 type ButtonProps = {
   title: string;
-  variant?: "home";
+  variant?: "Home"| 'Login';
+  type?: 'button' | 'reset' | 'submit';
 };
 
-const Button = ({ title, variant }: ButtonProps) => {
+const Button = ({ title, variant, type }: ButtonProps) => {
   const navigate = useNavigate();
   const clickHandle = () => {
-    if (variant === "home") {
+    if (variant === "Home") {
       navigate("/");
-    } else {
-      navigate("/login");
+    }
+    if (variant === 'Login'){
+      navigate('/login')
     }
   };
   return (
     <>
       <button
         onClick={clickHandle}
-        className=" bg-slate-200 hover:bg-blue-200 transition-colors rounded-[100px]"
+        className="bg-slate-200 hover:bg-blue-200 transition-colors rounded-[100px]"
+        type={type}
       >
         {title}
       </button>
