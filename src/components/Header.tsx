@@ -5,7 +5,11 @@ type HeaderProps = {
 
 const Header = ({ header }: HeaderProps) => {
   const isDesktopView = useViewportWidth("esm");
-  return <div>{isDesktopView ? header : header + "mobile"}</div>;
+  return (
+    <div className=" h-1/5 w-full">
+      {isDesktopView ? header : header + "mobile"}
+    </div>
+  );
 };
 
 export default Header;
