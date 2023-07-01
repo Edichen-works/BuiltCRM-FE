@@ -3,7 +3,6 @@ import LOGO from "../images/Built_CRM.png";
 import useViewportWidth from "../hooks/useViewPortWidth";
 import Button from "./Button";
 import Text from "./Text";
-import { Children } from "react";
 
 const LoginForm = () => {
   const isDesktopView = useViewportWidth("elg");
@@ -19,10 +18,10 @@ const LoginForm = () => {
   });
 
   return (
-    <div className={`flex ${isDesktopView ? "flex-row" : "flex-col"}`}>
+    <div className={`flex ${isDesktopView ? "flex-row" : "flex-col"} items-center`}>
       <img src={LOGO} alt="logo" />
-      <div className=" border border-black rounded-2xl">
-        <div className="p-6">
+      <div className=" border border-black rounded-2xl h-1/2">
+        <div className="p-8">
           <form onSubmit={loginFormik.handleSubmit}>
             <div className="flex flex-col justify-center items-center gap-4">
               <div className="flex flex-row gap-4 items-center">
