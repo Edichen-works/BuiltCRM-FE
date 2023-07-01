@@ -2,19 +2,14 @@ import { useNavigate } from "react-router-dom";
 
 type ButtonProps = {
   title: string;
-  variant?: "Home"| 'Login';
-  type?: 'button' | 'reset' | 'submit';
+  variant?: "Home" | "Login" | "Signup";
+  type?: "button" | "reset" | "submit";
 };
 
 const Button = ({ title, variant, type }: ButtonProps) => {
   const navigate = useNavigate();
   const clickHandle = () => {
-    if (variant === "Home") {
-      navigate("/");
-    }
-    if (variant === 'Login'){
-      navigate('/login')
-    }
+    navigate(`/${variant}`);
   };
   return (
     <>
