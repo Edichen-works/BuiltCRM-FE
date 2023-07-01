@@ -1,6 +1,10 @@
 import Button from "../components/Button";
-
+import { useNavigate } from "react-router-dom";
 const ErrorPage = () => {
+  const navigate = useNavigate();
+  setTimeout(() => {
+    navigate("/login");
+  }, 1500);
   return (
     <div
       id="error-page"

@@ -1,17 +1,13 @@
-import { useNavigate } from "react-router-dom";
-import useViewportWidth from "../hooks/useViewPortWidth";
-import Button from "../components/Button";
+// import useViewportWidth from "../hooks/useViewPortWidth";
 
 const Landing = () => {
-  const navigate = useNavigate();
-  const isDesktopView = useViewportWidth('elg');
+  // const isDesktopView = useViewportWidth("elg");
 
-  return <div>
+  return (
     <div>
-    Welcome Back
+      <div>Welcome Back</div>
     </div>
-    <Button title="Login" variant="Login"/>
-    </div>;
+  );
 };
 
 export default Landing;

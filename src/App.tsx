@@ -3,8 +3,9 @@ import Header from "./components/Header";
 
 function App() {
   return (
-    <div>
+    <div className="container w-screen">
       <Header />
+      <div className="h-[500px]" />
       <Landing />
     </div>
   );
